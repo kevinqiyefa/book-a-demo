@@ -7,6 +7,11 @@ $(function() {
   generateIconMsg(icon, header, msg);
 });
 
+$('#email').on('input', function() {
+  const $email = $('#email');
+  $email.css({ border: '2px solid #4789e8', background: '#ffffff' });
+});
+
 $('#email').change(() => {
   const $email = $('#email');
   const $errorMsg = $('.errorMsg');

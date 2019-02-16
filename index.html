@@ -25,13 +25,13 @@
     <form id='content'>
 
         <div id='business-email'>
-            <label for="email">Business Email</label>
+            <label for="email" class="titles-small">Business Email</label>
             <input type="email" name='email' autocomplete="off" id='email' placeholder="Please enter email" required>
             <div class='errorMsg'><i class="fas fa-exclamation-triangle"></i>Please make sure this isn't a personal email address</div>
         </div>
 
-        <div>
-            <p>Buiness Size</p>
+        <div id="business-size">
+            <p class="titles-small">Buiness Size</p>
             <select id='size' required>
                 <option value="">Select option</option>
                 <option value="1-10">1-10</option>
@@ -43,7 +43,7 @@
         </div>
 
         <div id='solutions'>
-            <p>What is the most important thing to you in a solution?</p>
+            <p class="titles-small">What is the most important thing to you in a solution?</p>
 
             <div>
                 <input type="radio" name='solutions' value="RTA"><span>Real-time Analytics</span>
