@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>MemSql</title>
@@ -8,78 +9,79 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  </head>
-  <body>
-    <header>
+</head>
 
-      <div id='logo'><img src="./MemSQL_horizontal_lockup_grey-white_logo.svg" alt=""></div>
+<body>
+
+    <header>
+        <div id='logo'><img src="./MemSQL_horizontal_lockup_grey-white_logo.svg" alt="logo"></div>
     </header>
 
-    <div id='content'>
-      <div id='calender-icon'><i class="far fa-calendar"></i></div>
-
-      <h1>Book a Demo</h1>
-      <p>Helping us customize your demo by answeing the following questions below.</p>
-
-      <div>
-        <label for="email">Business Email</label>
-        <input type="email" name='email' autocomplete="off" id='email'>
-      </div>
-
-      <div>
-          <p>Buiness Size</p>
-          <select>
-            <option value="1-10">1-10</option>
-            <option value="11-50">11-50</option>
-            <option value="51-100">51-100</option>
-            <option value="101-250">101-250</option>
-            <option value="250+">250+</option>
-          </select>
-      </div>
-
-      <div id='solutions'>
-        <p>What is the most important thing to you in a solution?</p>
+    <form id='content'>
 
         <div>
-          <input type="radio" name='solutions' value="RTA">Real-time Analytics
+            <label for="email">Business Email</label>
+            <input type="email" name='email' autocomplete="off" id='email' placeholder="Please enter email" required>
+            <div class='errorMsg'><i class="fas fa-exclamation-triangle"></i>Please make sure this isn't a personal email address</div>
         </div>
 
         <div>
-          <input type="radio" name='solutions' value="scalability">Scalability
+            <p>Buiness Size</p>
+            <select id='size' required>
+                <option value="">Select option</option>
+                <option value="1-10">1-10</option>
+                <option value="11-50">11-50</option>
+                <option value="51-100">51-100</option>
+                <option value="101-250">101-250</option>
+                <option value="250+">250+</option>
+            </select>
         </div>
 
-        <div>
-          <input type="radio" name='solutions' value="QRT">Quick Response Time
-        </div>
-        
-        <div>
-          <input type="radio" name='solutions' value="DS">Document storage
-        </div>
-        
-        <div>
-          <input type="radio" name='solutions' value="HC">High Concurrency
-        </div>
-        
-        <div>
-          <input type="radio" name='solutions' value="FTS">Full text search
-        </div>
-        
-        <div>
-          <input type="radio" name='solutions' value="FDI">Fast Data Ingest
-        </div>
-        
-        <div>
-          <input type="radio" name='solutions' value="price">Price
-        </div>
-        
+        <div id='solutions'>
+            <p>What is the most important thing to you in a solution?</p>
 
-      </div>
+            <div>
+                <input type="radio" name='solutions' value="RTA"><span>Real-time Analytics</span>
+            </div>
 
-      <button>Continue to Schedule a Time <i class="fas fa-arrow-right"></i></button>
+            <div>
+                <input type="radio" name='solutions' value="scalability"><span>Scalability</span>
+            </div>
 
-    </div>
+            <div>
+                <input type="radio" name='solutions' value="QRT"><span>Quick Response Time</span>
+            </div>
+
+            <div>
+                <input type="radio" name='solutions' value="DS"><span>Document storage</span>
+            </div>
+
+            <div>
+                <input type="radio" name='solutions' value="HC"><span>High Concurrency</span>
+            </div>
+
+            <div>
+                <input type="radio" name='solutions' value="FTS"><span>Full text search</span>
+            </div>
+
+            <div>
+                <input type="radio" name='solutions' value="FDI"><span>Fast Data Ingest</span>
+            </div>
+
+            <div>
+                <input type="radio" name='solutions' value="price"><span>Price</span>
+            </div>
+
+        </div>
+
+        <button>Continue to Schedule a Time <i class="fas fa-arrow-right"></i></button>
+
+    </form>
+
+  
 
     <script src="script.js"></script>
 
-  </body>
+</body>
+
 </html>

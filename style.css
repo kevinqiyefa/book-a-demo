@@ -14,7 +14,15 @@ header {
   display: flex;
   padding: 2em 1em;
 }
-#calender-icon {
+
+#icon-msg,
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#calendar-icon {
   width: 2em;
   height: 2em;
   background-color: #f2f2f2;
@@ -26,12 +34,8 @@ header {
   color: #0088bb;
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.errorMsg {
+  color: #d5322f;
+  font-size: 14px;
+  display: none;
 }
-
-/* #solutions > input {
-  width: %;
-} */
