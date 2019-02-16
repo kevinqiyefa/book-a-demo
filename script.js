@@ -4,7 +4,7 @@ $(function() {
   const msg =
     'Helping us customize your demo by answeing the following questions below.';
 
-  generateIconMsg('header', icon, header, msg);
+  generateIconMsg(icon, header, msg);
 });
 
 $('#email').change(() => {
@@ -22,20 +22,28 @@ $('#email').change(() => {
 });
 
 $('#content').submit(event => {
-  event.preventDefault();
-
+  let icon, header, msg;
   let size = $('#size').val();
   let solution = $('input[name=solutions]:checked').val();
+
+  event.preventDefault();
 
   if (!solution) return;
 
   $('form').hide();
 
+  $('#icon-msg').remove();
   if (validateInputs(size, solution)) {
-    $('#icon-msg').remove();
+    icon = 'fa-calendar-check';
+    header = `<h1>Awssome!</h1><h1>We'll contact you shortly</h1>`;
+    msg = `We'll send you an email with avaliable times to meet.`;
+  } else {
+    icon = 'fa-calendar-times';
+    header = `<h1>Oh no!</h1><h1>All our consultants are busy</h1>`;
+    msg = `We'll send you know when the next one is avaliable`;
   }
 
-  // console.log(validateEmail(email));
+  generateIconMsg(icon, header, msg);
 });
 
 const validateEmail = email => {
@@ -43,8 +51,8 @@ const validateEmail = email => {
   return re.test(email);
 };
 
-const generateIconMsg = (tag, icon, header, msg) => {
-  $(tag).after("<div id='icon-msg'></div>");
+const generateIconMsg = (icon, header, msg) => {
+  $('header').after("<div id='icon-msg'></div>");
 
   $('#icon-msg').append(
     `<div id='calendar-icon'><i class='far ${icon}'></i></div>`
